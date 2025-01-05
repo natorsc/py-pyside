@@ -1,0 +1,58 @@
+[project]
+name = "app-name"
+version = "0.1.0"
+description = "Initial template for projects with Python and Qt framework."
+readme = "README.md"
+authors = [
+    { name = "Renato Cruz", email = "natorsc@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pyside6==6.8.1",
+]
+
+[project.gui-scripts]
+app-name = "app.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.6",
+    "taskipy>=1.14.1",
+]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "/.github",
+    "/.idea",
+    "/.vscode",
+    "/docs",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/app"]
+
+[tool.ruff]
+line-length = 79
+extend-exclude = [
+    ".venv",
+    "docs",
+    "build",
+    ".flatpak-builder",
+    "flatpak-build-dir",
+    "resources_rc.py",
+]
+
+[tool.ruff.lint]
+select = ["I", "F", "E", "W", "PL", "PT"]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.taskipy.tasks]
+format = "ruff check . --select I --fix && ruff format ."
+setup = "python src/tools.py"
+tr = "pyside6-linguist"

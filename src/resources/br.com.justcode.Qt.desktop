@@ -1,0 +1,11 @@
+[Desktop Entry]
+Categories=Development;
+Comment=Graphical interface with Python and Kirigami.
+Exec=python3 main.py
+Icon=br.com.justcode.Qt
+Name=PyQML
+Path=/home/natorsc/Projetos/python-qt/src/qt-quick/application-window
+StartupNotify=true
+Terminal=false
+Type=Application
+Version=1.0

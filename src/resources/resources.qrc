@@ -1,0 +1,9 @@
+
+<RCC>
+  <qresource prefix="icons">
+    <file alias="app">icons/br.com.justcode.Qt.png</file>
+  </qresource>
+  <qresource prefix="locales">
+    <file alias="br.com.justcode.Qt.pt_BR.qm">locales/br.com.justcode.Qt.pt_BR.qm</file>
+  </qresource>
+</RCC>
