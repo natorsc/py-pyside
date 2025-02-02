@@ -12,9 +12,9 @@ Repository created with 💙 by [Renato Cruz](https://github.com/natorsc) 🤜�
 
 Check out programming and technology content on:
 
-[![justcode.com.br](https://img.shields.io/badge/-justcode.com.br-grey?logo=hashnode&logoColor=white)](https://justcode.com.br/ "Visit the justCode blog.")
+[![www.justcode.com.br](https://img.shields.io/badge/-justcode.com.br-grey?logo=hashnode&logoColor=white)](https://www.justcode.com.br "Visit the justCode blog.")
 
-[![swift.dev.br](https://img.shields.io/badge/-swift.dev.br-orange?logo=hashnode&logoColor=white)](https://justcode.com.br/ "Visit the justCode blog.")
+[![www.swift.dev.br](https://img.shields.io/badge/-swift.dev.br-orange?logo=hashnode&logoColor=white)](www.swift.dev.br "Visit the Swift Dev BR blog.")
 
 A playlist I often listen to while studying or coding 😁:
 
