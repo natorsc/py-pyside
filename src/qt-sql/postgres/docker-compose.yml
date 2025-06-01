@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:17.5
+    container_name: PostgreSQL
+    restart: on-failure
+    shm_size: 128mb
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: database_name

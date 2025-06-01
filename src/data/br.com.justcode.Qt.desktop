@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Exemplo
+Icon=/path/to/.local/share/icons/icon-name.png
+Path=/path/to/binary/or/script/folder
+Exec=python main.py" %f
+Comment=Exemplo
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=br.com.justcode.Qt
+StartupNotify=true

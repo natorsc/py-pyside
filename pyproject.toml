@@ -1,0 +1,30 @@
+[project]
+name = "python-qt"
+version = "0.1.0"
+description = "Creating graphical interfaces with Python and Qt."
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "pyside6==6.9.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.12",
+    "taskipy>=1.14.1",
+]
+
+[tool.ruff]
+line-length = 79
+extend-exclude = [".venv", "docs", "resources_rc.py"]
+
+[tool.ruff.lint]
+select = ["I", "F", "E", "W", "PL", "PT"]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.taskipy.tasks]
+format = "ruff check . --select I --fix && ruff format ."
+format-qml = "python -c 'from src.scripts import tasks; tasks.format_qml()'"
+format-qml-blk = "python -c 'from src.scripts import tasks; tasks.format_qml_bulk()'"
