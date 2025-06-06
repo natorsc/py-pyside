@@ -20,7 +20,7 @@ Se este conteúdo te ajuda, considere fazer uma doação. Seu apoio é essencial
 ## 🛠 Tecnologias Utilizadas
 
 [![Python](https://img.shields.io/badge/-Python-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![GTK](https://img.shields.io/badge/-GTK-blue?logo=gtk&logoColor=white)](https://www.gtk.org/)
+[![Qt](https://img.shields.io/badge/-Qt-blue?logo=gtk&logoColor=white)](https://www.qt.io/)
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 
 ## 👨‍💻 Autor
