@@ -5,12 +5,12 @@ description = "Creating graphical interfaces with Python and Qt."
 readme = "README.md"
 requires-python = ">=3.12,<3.14"
 dependencies = [
-    "pyside6==6.9.0",
+    "pyside6==6.9.1",
 ]
 
 [dependency-groups]
 dev = [
-    "ruff>=0.11.12",
+    "ruff>=0.12.5",
     "taskipy>=1.14.1",
 ]
 
