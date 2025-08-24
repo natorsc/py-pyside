@@ -10,7 +10,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "ruff>=0.12.5",
+    "ruff>=0.12.10",
     "taskipy>=1.14.1",
 ]
 

@@ -1,6 +1,6 @@
 services:
   db:
-    image: postgres:17.5
+    image: postgres:17.6
     container_name: PostgreSQL
     restart: on-failure
     shm_size: 128mb

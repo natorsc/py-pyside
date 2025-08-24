@@ -7,9 +7,6 @@
 [![forks - py-pyside](https://img.shields.io/github/forks/natorsc/py-pyside?style=social)](https://github.com/natorsc/py-pyside)
 [![License MIT](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)](./LICENSE)
 
-- [🇺🇸](./README.md)
-- [🇧🇷](./README-pt_BR.md)
-
 ## ✨ About this project
 
 This repository is your complete guide to building sleek, modern graphical user interfaces with Python (PySide) and Qt framework. Whether you're a beginner or an experienced developer, you'll find practical tutorials, tips, and real code examples to level up your projects.
@@ -65,33 +62,330 @@ Your donation keeps this project alive and helps me continue creating and sharin
 
 - [KDE Apps](https://apps.kde.org/).
 
-### Flatpak
+### PySide6
 
-- [Official website](https://www.flatpak.org/).
-- [Flathub](https://flathub.org/).
-- [Example (br.com.justcode.Qt.json)](./_flatpak/br.com.justcode.Qt.json).
-- [https://github.com/flathub/io.qt.PySide.BaseApp](https://github.com/flathub/io.qt.PySide.BaseApp).
+Main commands:
+
+- `pyside6-android-deploy`.
+- `pyside6-assistant`.
+- `pyside6-balsam`.
+- `pyside6-balsamui`.
+- `pyside6-deploy`.
+- `pyside6-designer`.
+- `pyside6-genpyi`.
+- `pyside6-linguist`.
+- `pyside6-lrelease`.
+- `pyside6-lupdate`.
+- `pyside6-metaobjectdump`.
+- `pyside6-project`.
+- `pyside6-qml`.
+- `pyside6-qmlcachegen`.
+- `pyside6-qmlformat`.
+- `pyside6-qmlimportscanner`.
+- `pyside6-qmllint`.
+- `pyside6-qmlls`.
+- `pyside6-qmltyperegistrar`.
+- `pyside6-qsb`.
+- `pyside6-qtpy2cpp`.
+- `pyside6-rcc`.
+- `pyside6-svgtoqml`.
+- `pyside6-uic`.
 
 ---
 
-<br>
+## Flatpak
+
+### Pip generator
+
+- [flatpak-pip-generator](https://github.com/flatpak/flatpak-builder-tools/blob/master/pip/flatpak-pip-generator.py)
+
+### PySide6
+
+- [PySide.BaseApp](https://github.com/flathub/io.qt.PySide.BaseApp).
+
+Example:
+
+```json
+{
+  "id": "com.github.natorsc.AppName",
+  "runtime": "org.kde.Platform",
+  "runtime-version": "6.9",
+  "sdk": "org.kde.Sdk",
+  "base": "io.qt.PySide.BaseApp",
+  "base-version": "6.9",
+  "command": "app-name",
+  "cleanup-commands": [
+    "- /app/cleanup-BaseApp.sh"
+  ],
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=x11",
+    "--socket=pulseaudio",
+    "--device=dri"
+  ],
+  "modules": [
+    {
+      "name": "app-name",
+      "buildsystem": "simple",
+      "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"app_name\" --no-build-isolation"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "path": "./dist/app_name-0.1.0-py3-none-any.whl"
+        }
+      ]
+    }
+  ]
+}
+```
+
+### PyQt6
+
+- [PyQt.BaseApp](https://github.com/flathub/com.riverbankcomputing.PyQt.BaseApp).
+
+Example:
+
+```json
+{
+  "id": "com.github.natorsc.AppName",
+  "runtime": "org.kde.Platform",
+  "runtime-version": "6.9",
+  "sdk": "org.kde.Sdk",
+  "base": "com.riverbankcomputing.PyQt.BaseApp",
+  "base-version": "6.9",
+  "command": "app-name",
+  "cleanup-commands": [
+    "- /app/cleanup-BaseApp.sh"
+  ],
+  "finish-args": [
+    "--share=ipc",
+    "--socket=wayland",
+    "--socket=x11",
+    "--socket=pulseaudio",
+    "--device=dri"
+  ],
+  "modules": [
+    {
+      "name": "app-name",
+      "buildsystem": "simple",
+      "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"app_name\" --no-build-isolation"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "path": "./dist/app_name-0.1.0-py3-none-any.whl"
+        }
+      ]
+    }
+  ]
+}
+```
+
+---
 
 ## QtSql
 
-### SQLite
+### QSQLITE (SQLite3)
 
-- [Python](src/qt-quick/application-window/main.py).
+- [Python](src/qt-sql/sqlite/main.py).
 
-### PostgreSQL
+### QPSQL (PostgreSQL)
 
 - [Python](src/qt-sql/postgres/main.py).
 - [Docker compose](src/qt-sql/postgres/docker-compose.yml).
+
+#### Arch Linux
+
+```bash
+sudo pacman -S \
+postgresql-libs
+```
+
+#### QMARIADB (MariaDB)
+
+- [Python](src/qt-sql/mariadb/main.py).
+- [Docker compose](src/qt-sql/mariadb/docker-compose.yml).
+
+#### Arch Linux
+
+```bash
+sudo pacman -S \
+mariadb-libs
+```
+
+#### QMYSQL (MySQL)
+
+- [Python](src/qt-sql/mysql/main.py).
+- [Docker compose](src/qt-sql/mysql/docker-compose.yml).
+
+#### Arch Linux
+
+```bash
+sudo pacman -S \
+mariadb-libs
+```
 
 ---
 
 ## KDE Kirigami
 
-> Coming soon 😎.
+Kirigami is a KDE UI (User Interface) framework designed to make it easier to create convergent and responsive applications.
+
+## Dependências
+
+### Arch Linux
+
+```bash
+sudo pacman -S \
+pyside6 \
+kirigami \
+flatpak-builder \
+qqc2-desktop-style \
+appstream
+```
+
+> PyQt6: `sudo pacman -S python-pyqt6`.
+
+### Fedora
+
+```bash
+sudo dnf install \
+python3-pyside6 \
+kf6-kirigami-devel \
+flatpak-builder \
+qqc2-desktop-style \
+appstream-compose
+```
+
+> PyQt6: `sudo dnf install python3-pyqt6`.
+
+### openSuse
+
+```bash
+sudo zypper install \
+python3-qt6 \
+python3-pyside6 \
+kf6-kirigami-devel \
+flatpak-builder \
+qqc2-desktop-style \
+AppStream-compose
+```
+
+> PyQt6: `sudo zypper install python-PyQt6`.
+
+### Abstract card
+
+![Abstract card](docs/images/kde-kirigami/abstract-card.webp "Abstract card")
+
+Code:
+
+- [Python](src/kde-kirigami/abstract-card/main.py).
+- [QML](src/kde-kirigami/abstract-card/main.qml).
+
+### Application window
+
+![Application window](docs/images/kde-kirigami/application-window.webp "Application window")
+
+Code:
+
+- [Python](src/kde-kirigami/application-window/main.py).
+- [QML](src/kde-kirigami/application-window/main.qml).
+
+### Card
+
+![Card](docs/images/kde-kirigami/card.webp "Card")
+
+Code:
+
+- [Python](src/kde-kirigami/card/main.py).
+- [QML](src/kde-kirigami/card/main.qml).
+
+### Chips
+
+![Chips](docs/images/kde-kirigami/chips.webp "Chips")
+
+Code:
+
+- [Python](src/kde-kirigami/chips/main.py).
+- [QML](src/kde-kirigami/chips/main.qml).
+
+### Dialog
+
+![Dialog](docs/images/kde-kirigami/dialog.webp "Dialog")
+
+Code:
+
+- [Python](src/kde-kirigami/dialog/main.py).
+- [QML](src/kde-kirigami/dialog/main.qml).
+
+### Dialog menu
+
+![Dialog menu](docs/images/kde-kirigami/dialog-menu.webp "Dialog menu")
+
+Code:
+
+- [Python](src/kde-kirigami/dialog-menu/main.py).
+- [QML](src/kde-kirigami/dialog-menu/main.qml).
+
+### Dialog prompt
+
+![Dialog prompt](docs/images/kde-kirigami/dialog-prompt.webp "Dialog prompt")
+
+Code:
+
+- [Python](src/kde-kirigami/dialog-prompt/main.py).
+- [QML](src/kde-kirigami/dialog-prompt/main.qml).
+
+### Global drawer
+
+![Global drawer](docs/images/kde-kirigami/global-drawer.webp "Global drawer")
+
+Code:
+
+- [Python](src/kde-kirigami/global-drawer/main.py).
+- [QML](src/kde-kirigami/global-drawer/main.qml).
+
+### Global drawer context
+
+> ToDo.
+
+![Global drawer context](docs/images/kde-kirigami/global-drawer-context.webp "Global drawer context")
+
+Code:
+
+- [Python](src/kde-kirigami/global-drawer-context/main.py).
+- [QML](src/kde-kirigami/global-drawer-context/main.qml).
+
+### Global drawer desktop
+
+![Global drawer desktop](docs/images/kde-kirigami/global-drawer-desktop.webp "Global drawer desktop")
+
+Code:
+
+- [Python](src/kde-kirigami/global-drawer-desktop/main.py).
+- [QML](src/kde-kirigami/global-drawer-desktop/main.qml).
+
+### Global drawer header
+
+![Global drawer header](docs/images/kde-kirigami/global-drawer-header.webp "Global drawer header")
+
+Code:
+
+- [Python](src/kde-kirigami/global-drawer-header/main.py).
+- [QML](src/kde-kirigami/global-drawer-header/main.qml).
+
+### Overlay drawer
+
+![Overlay drawer](docs/images/kde-kirigami/overlay-drawer.webp "Overlay drawer")
+
+Code:
+
+- [Python](src/kde-kirigami/overlay-drawer/main.py).
+- [QML](src/kde-kirigami/overlay-drawer/main.qml).
 
 ---
 

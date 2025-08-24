@@ -6,21 +6,21 @@ import sys
 from PySide6 import QtCore, QtSql, QtWidgets
 
 BASE_DIR = QtCore.QDir(QtCore.QFileInfo(__file__).absolutePath())
-DATABASE = BASE_DIR.filePath('database.sqlite3')
+DATABASE = BASE_DIR.filePath('db.sqlite3')
 
-TABLE_NAME = 'table_name'
-CREATE_TABLE_USER = f"""CREATE TABLE {TABLE_NAME} (
+
+CREATE_TABLE_USER = """CREATE TABLE IF NOT EXISTS user_account (
 id INTEGER PRIMARY KEY AUTOINCREMENT,
 name TEXT NOT NULL,
 username TEXT NOT NULL
-);
-"""
+);"""
 
 application = QtWidgets.QApplication(sys.argv)
 
 db = QtSql.QSqlDatabase.addDatabase('QSQLITE')
 db.setDatabaseName(DATABASE)
 
+print('PySide6 drivers:')
 print(db.drivers())
 
 if not db.open():
@@ -29,7 +29,10 @@ if not db.open():
 
 query = QtSql.QSqlQuery(db)
 
-if TABLE_NAME in db.database().tables():
+print('Databases:')
+print(db.database().tables())
+
+if 'user_account' in db.database().tables():
     print('Table already exists')
 else:
     print('Creating table')
@@ -40,7 +43,7 @@ else:
     else:
         print('Table created successfully')
 
-query.prepare(f'INSERT INTO {TABLE_NAME} (name, username) VALUES (?, ?)')
+query.prepare('INSERT INTO user_account (name, username) VALUES (?, ?)')
 query.addBindValue('Renato')
 query.addBindValue('natorsc')
 query.exec()

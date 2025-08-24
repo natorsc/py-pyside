@@ -6,16 +6,16 @@ import sys
 from PySide6 import QtSql, QtWidgets
 
 CREATE_TABLE_USER = """CREATE TABLE IF NOT EXISTS user_account (
-id serial PRIMARY KEY,
+id INT AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(32) NOT NULL,
 username VARCHAR(32) NOT NULL
 );"""
 
 application = QtWidgets.QApplication(sys.argv)
 
-db = QtSql.QSqlDatabase.addDatabase('QPSQL')
-db.setHostName('localhost')
-db.setPort(5432)
+db = QtSql.QSqlDatabase.addDatabase('QMYSQL')
+db.setHostName('127.0.0.1')
+db.setPort(3306)
 db.setDatabaseName('database_name')
 db.setUserName('dbuser')
 db.setPassword('123456')
