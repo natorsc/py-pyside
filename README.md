@@ -187,6 +187,78 @@ Example:
 
 ---
 
+## Github actions
+
+> If necessary, create a file for each operating system.
+
+```yml
+name: Deploying PySide6 with Nuitka ⚙️.
+on:
+  push:
+    branches: ['main']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'deploy'
+  cancel-in-progress: true
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: '${{ matrix.os }}'
+    steps:
+      - name: Check out repository 💾.
+        uses: actions/checkout@v5
+      
+      - name: Install Python 🐍.
+        uses: actions/setup-python@v5
+        with:
+            python-version: '3.11'
+            architecture: 'x64'
+            cache: 'pip'
+            cache-dependency-path: |
+              **/requirements*.txt
+
+      - name: Install requirements 🔨.
+        working-directory: .
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Install and configure Nuitka 🛠️.
+        uses: Nuitka/Nuitka-Action@main
+        with:
+          nuitka-version: main
+          script-name: path/to/the/script.py
+          enable-plugins: pyside6
+          quiet: true
+          standalone: true
+          disable-console: true
+          macos-create-app-bundle: true
+          output-file: nome-do-aplicativo
+          linux-icon: path/to/the/icon.ico
+          windows-icon-from-ico: path/to/the/icon.ico
+          macos-app-icon: path/to/the/con.icns
+          macos-app-name: nome-do-aplicativo
+
+      - name: Upload artifact (onefile) 🚀.
+        uses: actions/upload-artifact@v4
+        with:
+          name: '${{ runner.os }}-build'
+          path: |
+            build/app.dist
+            build/*.exe
+            build/*.bin
+            build/*.app/**/*
+```
+
+---
+
 ## QtSql
 
 ### QSQLITE (SQLite3)
