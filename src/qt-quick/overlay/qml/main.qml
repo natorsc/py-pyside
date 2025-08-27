@@ -5,12 +5,12 @@ import QtQuick.Layouts
 ApplicationWindow {
     id: root
 
-    height: 360
+    height: minimumHeight
     minimumHeight: 360
     minimumWidth: 640
     title: "Python - PySide6 - Qt"
     visible: true
-    width: 640
+    width: minimumWidth
 
     ColumnLayout {
         anchors.centerIn: parent

@@ -6,13 +6,13 @@ import org.kde.kirigami as Kirigami
 Kirigami.ApplicationWindow {
     id: root
 
-    height: 360
+    height: minimumHeight
     minimumHeight: 640
     minimumWidth: 360
     pageStack.initialPage: [emptyPage, contextDrawerPage]
     title: qsTr("Python - PySide6 - Kirigami")
     visible: true
-    width: 640
+    width: minimumWidth
 
     contextDrawer: Kirigami.ContextDrawer {
     }
