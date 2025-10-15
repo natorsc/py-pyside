@@ -313,6 +313,7 @@ Kirigami is a KDE UI (User Interface) framework designed to make it easier to cr
 
 ```bash
 sudo pacman -S \
+python-lsp-server \
 pyside6 \
 kirigami \
 flatpak-builder \
@@ -326,6 +327,7 @@ appstream
 
 ```bash
 sudo dnf install \
+python3-lsp-server \
 python3-pyside6 \
 kf6-kirigami-devel \
 flatpak-builder \
