@@ -3,14 +3,14 @@ name = "python-qt"
 version = "0.1.0"
 description = "Creating graphical interfaces with Python and Qt."
 readme = "README.md"
-requires-python = ">=3.12,<3.14"
+requires-python = ">=3.12,<3.15"
 dependencies = [
-    "pyside6==6.9.2",
+    "pyside6==6.10.0",
 ]
 
 [dependency-groups]
 dev = [
-    "ruff>=0.12.11",
+    "ruff>=0.14.1",
     "taskipy>=1.14.1",
 ]
 
@@ -28,3 +28,4 @@ quote-style = "single"
 format = "ruff check . --select I --fix && ruff format ."
 format-qml = "python -c 'from src.scripts import tasks; tasks.format_qml()'"
 format-qml-blk = "python -c 'from src.scripts import tasks; tasks.format_qml_bulk()'"
+outdated = "uv tree --outdated --depth=1"
