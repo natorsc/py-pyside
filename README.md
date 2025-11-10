@@ -103,6 +103,8 @@ Main commands:
 
 - [PySide.BaseApp](https://github.com/flathub/io.qt.PySide.BaseApp).
 
+> `flatpak install org.kde.Platform/x86_64/6.9 org.kde.Sdk/x86_64/6.9`
+
 Example:
 
 ```json
