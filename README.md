@@ -309,6 +309,8 @@ mariadb-libs
 
 Kirigami is a KDE UI (User Interface) framework designed to make it easier to create convergent and responsive applications.
 
+> The Kirigami framework cannot be used within virtual environments (venv, poetry, pdm, uv, etc).
+
 ## Dependências
 
 ### Arch Linux
