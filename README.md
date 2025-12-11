@@ -360,7 +360,7 @@ AppStream-compose
 Code:
 
 - [Python](src/kde-kirigami/abstract-card/main.py).
-- [QML](src/kde-kirigami/abstract-card/main.qml).
+- [QML](src/kde-kirigami/abstract-card/qml/main.qml).
 
 ### Application window
 
@@ -369,7 +369,7 @@ Code:
 Code:
 
 - [Python](src/kde-kirigami/application-window/main.py).
-- [QML](src/kde-kirigami/application-window/main.qml).
+- [QML](src/kde-kirigami/application-window/qml/main.qml).
 
 ### Card
 
@@ -378,7 +378,7 @@ Code:
 Code:
 
 - [Python](src/kde-kirigami/card/main.py).
-- [QML](src/kde-kirigami/card/main.qml).
+- [QML](src/kde-kirigami/card/qml/main.qml).
 
 ### Chips
 
@@ -387,7 +387,7 @@ Code:
 Code:
 
 - [Python](src/kde-kirigami/chips/main.py).
-- [QML](src/kde-kirigami/chips/main.qml).
+- [QML](src/kde-kirigami/chips/qml/main.qml).
 
 ### Dialog
 
@@ -396,7 +396,7 @@ Code:
 Code:
 
 - [Python](src/kde-kirigami/dialog/main.py).
-- [QML](src/kde-kirigami/dialog/main.qml).
+- [QML](src/kde-kirigami/dialog/qml/main.qml).
 
 ### Dialog menu
 
@@ -405,7 +405,7 @@ Code:
 Code:
 
 - [Python](src/kde-kirigami/dialog-menu/main.py).
-- [QML](src/kde-kirigami/dialog-menu/main.qml).
+- [QML](src/kde-kirigami/dialog-menu/qml/main.qml).
 
 ### Dialog prompt
 
@@ -414,7 +414,7 @@ Code:
 Code:
 
 - [Python](src/kde-kirigami/dialog-prompt/main.py).
-- [QML](src/kde-kirigami/dialog-prompt/main.qml).
+- [QML](src/kde-kirigami/dialog-prompt/qml/main.qml).
 
 ### Global drawer
 
@@ -423,7 +423,7 @@ Code:
 Code:
 
 - [Python](src/kde-kirigami/global-drawer/main.py).
-- [QML](src/kde-kirigami/global-drawer/main.qml).
+- [QML](src/kde-kirigami/global-drawer/qml/main.qml).
 
 ### Global drawer context
 
@@ -434,7 +434,7 @@ Code:
 Code:
 
 - [Python](src/kde-kirigami/global-drawer-context/main.py).
-- [QML](src/kde-kirigami/global-drawer-context/main.qml).
+- [QML](src/kde-kirigami/global-drawer-context/qml/main.qml).
 
 ### Global drawer desktop
 
@@ -443,7 +443,7 @@ Code:
 Code:
 
 - [Python](src/kde-kirigami/global-drawer-desktop/main.py).
-- [QML](src/kde-kirigami/global-drawer-desktop/main.qml).
+- [QML](src/kde-kirigami/global-drawer-desktop/qml/main.qml).
 
 ### Global drawer header
 
@@ -452,7 +452,7 @@ Code:
 Code:
 
 - [Python](src/kde-kirigami/global-drawer-header/main.py).
-- [QML](src/kde-kirigami/global-drawer-header/main.qml).
+- [QML](src/kde-kirigami/global-drawer-header/qml/main.qml).
 
 ### Overlay drawer
 
@@ -461,7 +461,7 @@ Code:
 Code:
 
 - [Python](src/kde-kirigami/overlay-drawer/main.py).
-- [QML](src/kde-kirigami/overlay-drawer/main.qml).
+- [QML](src/kde-kirigami/overlay-drawer/qml/main.qml).
 
 ---
 
@@ -476,7 +476,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/application-window/main.py).
-- [QML](src/qt-quick/application-window/main.qml).
+- [QML](src/qt-quick/application-window/qml/main.qml).
 
 ---
 
@@ -487,7 +487,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/busy-indicator/main.py).
-- [QML](src/qt-quick/busy-indicator/main.qml).
+- [QML](src/qt-quick/busy-indicator/qml/main.qml).
 
 ---
 
@@ -498,7 +498,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/button/main.py).
-- [QML](src/qt-quick/button/main.qml).
+- [QML](src/qt-quick/button/qml/main.qml).
 
 ---
 
@@ -509,7 +509,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/button-group/main.py).
-- [QML](src/qt-quick/button-group/main.qml).
+- [QML](src/qt-quick/button-group/qml/main.qml).
 
 ---
 
@@ -545,7 +545,7 @@ qml6-module-qtcharts
 Code:
 
 - [Python](src/qt-quick/charts/area-series/main.py)
-- [QML](src/qt-quick/charts/area-series/main.qml)
+- [QML](src/qt-quick/charts/area-series/qml/main.qml)
 
 ---
 
@@ -556,7 +556,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/charts/bar-series/main.py)
-- [QML](src/qt-quick/charts/bar-series/main.qml)
+- [QML](src/qt-quick/charts/bar-series/qml/main.qml)
 
 ---
 
@@ -567,7 +567,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/charts/horizontal-bar-series/main.py)
-- [QML](src/qt-quick/charts/horizontal-bar-series/main.qml)
+- [QML](src/qt-quick/charts/horizontal-bar-series/qml/main.qml)
 
 ---
 
@@ -578,7 +578,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/charts/horizontal-percent-bar-series/main.py)
-- [QML](src/qt-quick/charts/horizontal-percent-bar-series/main.qml)
+- [QML](src/qt-quick/charts/horizontal-percent-bar-series/qml/main.qml)
 
 ---
 
@@ -589,7 +589,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/charts/horizontal-stacked-bar-series/main.py)
-- [QML](src/qt-quick/charts/horizontal-stacked-bar-series/main.qml)
+- [QML](src/qt-quick/charts/horizontal-stacked-bar-series/qml/main.qml)
 
 ---
 
@@ -600,7 +600,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/charts/line-series/main.py)
-- [QML](src/qt-quick/charts/line-series/main.qml)
+- [QML](src/qt-quick/charts/line-series/qml/main.qml)
 
 ---
 
@@ -611,7 +611,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/charts/percent-bar-series/main.py)
-- [QML](src/qt-quick/charts/percent-bar-series/main.qml)
+- [QML](src/qt-quick/charts/percent-bar-series/qml/main.qml)
 
 ---
 
@@ -622,7 +622,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/charts/pie-donut-series/main.py)
-- [QML](src/qt-quick/charts/pie-donut-series/main.qml)
+- [QML](src/qt-quick/charts/pie-donut-series/qml/main.qml)
 
 ---
 
@@ -633,7 +633,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/charts/pie-series/main.py)
-- [QML](src/qt-quick/charts/pie-series/main.qml)
+- [QML](src/qt-quick/charts/pie-series/qml/main.qml)
 
 ---
 
@@ -644,7 +644,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/charts/scatter-series/main.py)
-- [QML](src/qt-quick/charts/scatter-series/main.qml)
+- [QML](src/qt-quick/charts/scatter-series/qml/main.qml)
 
 ---
 
@@ -655,7 +655,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/charts/spline-series/main.py)
-- [QML](src/qt-quick/charts/spline-series/main.qml)
+- [QML](src/qt-quick/charts/spline-series/qml/main.qml)
 
 ---
 
@@ -666,7 +666,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/charts/stacked-bar-series/main.py)
-- [QML](src/qt-quick/charts/stacked-bar-series/main.qml)
+- [QML](src/qt-quick/charts/stacked-bar-series/qml/main.qml)
 
 ---
 
@@ -677,7 +677,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/check-box/main.py).
-- [QML](src/qt-quick/check-box/main.qml).
+- [QML](src/qt-quick/check-box/qml/main.qml).
 
 ---
 
@@ -688,7 +688,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/check-delegate/main.py).
-- [QML](src/qt-quick/check-delegate/main.qml).
+- [QML](src/qt-quick/check-delegate/qml/main.qml).
 
 ---
 
@@ -699,7 +699,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/color-dialog/main.py).
-- [QML](src/qt-quick/color-dialog/main.qml).
+- [QML](src/qt-quick/color-dialog/qml/main.qml).
 
 ---
 
@@ -710,7 +710,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/column-layout/main.py).
-- [QML](src/qt-quick/column-layout/main.qml).
+- [QML](src/qt-quick/column-layout/qml/main.qml).
 
 ---
 
@@ -721,7 +721,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/combo-box/main.py).
-- [QML](src/qt-quick/combo-box/main.qml).
+- [QML](src/qt-quick/combo-box/qml/main.qml).
 
 ---
 
@@ -732,7 +732,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/day-of-week-row/main.py).
-- [QML](src/qt-quick/day-of-week-row/main.qml).
+- [QML](src/qt-quick/day-of-week-row/qml/main.qml).
 
 ---
 
@@ -743,7 +743,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/delay-button/main.py).
-- [QML](src/qt-quick/delay-button/main.qml).
+- [QML](src/qt-quick/delay-button/qml/main.qml).
 
 ---
 
@@ -754,7 +754,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/dial/main.py).
-- [QML](src/qt-quick/dial/main.qml).
+- [QML](src/qt-quick/dial/qml/main.qml).
 
 ---
 
@@ -765,7 +765,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/dialog/main.py).
-- [QML](src/qt-quick/dialog/main.qml).
+- [QML](src/qt-quick/dialog/qml/main.qml).
 
 ---
 
@@ -776,7 +776,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/drawer/main.py).
-- [QML](src/qt-quick/drawer/main.qml).
+- [QML](src/qt-quick/drawer/qml/main.qml).
 
 ---
 
@@ -787,7 +787,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/file-dialog/main.py).
-- [QML](src/qt-quick/file-dialog/main.qml).
+- [QML](src/qt-quick/file-dialog/qml/main.qml).
 
 ---
 
@@ -798,7 +798,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/folder-dialog/main.py).
-- [QML](src/qt-quick/folder-dialog/main.qml).
+- [QML](src/qt-quick/folder-dialog/qml/main.qml).
 
 ---
 
@@ -809,7 +809,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/font-dialog/main.py).
-- [QML](src/qt-quick/font-dialog/main.qml).
+- [QML](src/qt-quick/font-dialog/qml/main.qml).
 
 ---
 
@@ -820,7 +820,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/frame/main.py).
-- [QML](src/qt-quick/frame/main.qml).
+- [QML](src/qt-quick/frame/qml/main.qml).
 
 ---
 
@@ -831,7 +831,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/grid-layout/main.py).
-- [QML](src/qt-quick/grid-layout/main.qml).
+- [QML](src/qt-quick/grid-layout/qml/main.qml).
 
 ---
 
@@ -842,7 +842,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/group-box/main.py).
-- [QML](src/qt-quick/group-box/main.qml).
+- [QML](src/qt-quick/group-box/qml/main.qml).
 
 ---
 
@@ -853,7 +853,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/import-qml-file/main.py).
-- [QML](src/qt-quick/import-qml-file/main.qml).
+- [QML](src/qt-quick/import-qml-file/qml/main.qml).
 
 ---
 
@@ -864,7 +864,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/item-delegate/main.py).
-- [QML](src/qt-quick/item-delegate/main.qml).
+- [QML](src/qt-quick/item-delegate/qml/main.qml).
 
 ---
 
@@ -875,7 +875,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/layout-item-proxy/main.py).
-- [QML](src/qt-quick/layout-item-proxy/main.qml).
+- [QML](src/qt-quick/layout-item-proxy/qml/main.qml).
 
 ---
 
@@ -886,7 +886,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/message-dialog/main.py).
-- [QML](src/qt-quick/message-dialog/main.qml).
+- [QML](src/qt-quick/message-dialog/qml/main.qml).
 
 ---
 
@@ -897,7 +897,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/overlay/main.py).
-- [QML](src/qt-quick/overlay/main.qml).
+- [QML](src/qt-quick/overlay/qml/main.qml).
 
 ---
 
@@ -908,7 +908,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/popup/main.py).
-- [QML](src/qt-quick/popup/main.qml).
+- [QML](src/qt-quick/popup/qml/main.qml).
 
 ---
 
@@ -919,7 +919,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/row-layout/main.py).
-- [QML](src/qt-quick/row-layout/main.qml).
+- [QML](src/qt-quick/row-layout/qml/main.qml).
 
 ---
 
@@ -932,7 +932,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/set-initial-properties/main.py).
-- [QML](src/qt-quick/set-initial-properties/main.qml).
+- [QML](src/qt-quick/set-initial-properties/qml/main.qml).
 
 ---
 
@@ -943,7 +943,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/stack-layout/main.py).
-- [QML](src/qt-quick/stack-layout/main.qml).
+- [QML](src/qt-quick/stack-layout/qml/main.qml).
 
 ---
 
@@ -954,7 +954,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/text-field/main.py).
-- [QML](src/qt-quick/text-field/main.qml).
+- [QML](src/qt-quick/text-field/qml/main.qml).
 
 ---
 
@@ -965,7 +965,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/text-input/main.py).
-- [QML](src/qt-quick/text-input/main.qml).
+- [QML](src/qt-quick/text-input/qml/main.qml).
 
 ---
 
@@ -976,7 +976,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/translation/main.py).
-- [QML](src/qt-quick/translation/main.qml).
+- [QML](src/qt-quick/translation/qml/main.qml).
 
 ---
 
@@ -987,7 +987,7 @@ Code:
 Code:
 
 - [Python](src/qt-quick/tree-view/main.py).
-- [QML](src/qt-quick/tree-view/main.qml).
+- [QML](src/qt-quick/tree-view/qml/main.qml).
 
 ---
 
