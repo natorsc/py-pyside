@@ -86,7 +86,7 @@ uvx ruff check . --fix && uvx ruff format .
 ### PySide6
 
 ```bash
-uvx ruff check . --fix && uvx ruff format .
+uv run python _scripts/tasks.py
 ```
 
 ---

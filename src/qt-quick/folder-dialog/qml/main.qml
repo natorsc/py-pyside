@@ -1,8 +1,8 @@
+import QtCore
 import QtQuick
 import QtQuick.Controls
-import QtQuick.Layouts
-import QtCore
 import QtQuick.Dialogs
+import QtQuick.Layouts
 
 ApplicationWindow {
     id: root

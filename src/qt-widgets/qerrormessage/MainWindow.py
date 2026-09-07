@@ -5,19 +5,19 @@ import sys
 
 from PySide6 import QtCore, QtWidgets
 
-APPLICATION_NAME = 'br.com.justcode.Qt'
-ORGANIZATION_NAME = APPLICATION_NAME.split('.')[2]
-ORGANIZATION_DOMAIN = '.'.join(APPLICATION_NAME.split('.')[0:3])
+APPLICATION_NAME = "br.com.justcode.Qt"
+ORGANIZATION_NAME = APPLICATION_NAME.split(".")[2]
+ORGANIZATION_DOMAIN = ".".join(APPLICATION_NAME.split(".")[0:3])
 
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, parent=None, **kwargs):
         super().__init__(parent=parent)
-        self.application = kwargs.get('application')
+        self.application = kwargs.get("application")
 
         self.resize(640, 360)
         self.setMinimumSize(640, 360)
-        self.setWindowTitle('Python - PySide6 - Qt')
+        self.setWindowTitle("Python - PySide6 - Qt")
 
         vbox = QtWidgets.QVBoxLayout()
 
@@ -26,14 +26,14 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setCentralWidget(central_widget)
 
         button = QtWidgets.QPushButton()
-        button.setText('Open dialog')
+        button.setText("Open dialog")
         button.clicked.connect(self.on_button_clicked)
         vbox.addWidget(button)
 
     def on_button_clicked(self):
         dialog = QtWidgets.QErrorMessage(self)
         dialog.setModal(True)
-        dialog.showMessage('Lorem Ipsum is simply dummy text of the...')
+        dialog.showMessage("Lorem Ipsum is simply dummy text of the...")
         dialog.open()
 
 
@@ -45,7 +45,7 @@ def main() -> None:
     application.setOrganizationName(ORGANIZATION_NAME)
     application.setOrganizationDomain(ORGANIZATION_DOMAIN)
 
-    if QtCore.QSysInfo.productType() == 'windows':
+    if QtCore.QSysInfo.productType() == "windows":
         from ctypes import windll
 
         windll.shell32.SetCurrentProcessExplicitAppUserModelID(
@@ -58,5 +58,5 @@ def main() -> None:
     sys.exit(application.exec())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

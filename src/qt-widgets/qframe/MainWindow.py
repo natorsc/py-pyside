@@ -5,19 +5,19 @@ import sys
 
 from PySide6 import QtCore, QtWidgets
 
-APPLICATION_NAME = 'br.com.justcode.Qt'
-ORGANIZATION_NAME = APPLICATION_NAME.split('.')[2]
-ORGANIZATION_DOMAIN = '.'.join(APPLICATION_NAME.split('.')[0:3])
+APPLICATION_NAME = "br.com.justcode.Qt"
+ORGANIZATION_NAME = APPLICATION_NAME.split(".")[2]
+ORGANIZATION_DOMAIN = ".".join(APPLICATION_NAME.split(".")[0:3])
 
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, parent=None, **kwargs):
         super().__init__(parent=parent)
-        self.application = kwargs.get('application')
+        self.application = kwargs.get("application")
 
         self.resize(640, 360)
         self.setMinimumSize(640, 360)
-        self.setWindowTitle('Python - PySide6 - Qt')
+        self.setWindowTitle("Python - PySide6 - Qt")
 
         vbox = QtWidgets.QVBoxLayout()
 
@@ -26,9 +26,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setCentralWidget(central_widget)
 
         frame = QtWidgets.QFrame()
-        frame.setFrameStyle(
-            QtWidgets.QFrame.Panel
-        )  # | QtWidgets.QFrame.Raised
+        frame.setFrameStyle(QtWidgets.QFrame.Panel)  # | QtWidgets.QFrame.Raised
         frame.setLineWidth(2)
         frame.setContentsMargins(10, 10, 10, 10)
         vbox.addWidget(frame)
@@ -36,13 +34,11 @@ class MainWindow(QtWidgets.QMainWindow):
         frame_vbox = QtWidgets.QVBoxLayout()
         frame.setLayout(frame_vbox)
 
-        label = QtWidgets.QLabel(
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        )
+        label = QtWidgets.QLabel("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
         label.setAlignment(QtCore.Qt.AlignCenter)  # Centraliza o texto
         frame_vbox.addWidget(label)
 
-        self.action_button = QtWidgets.QPushButton('Button')
+        self.action_button = QtWidgets.QPushButton("Button")
         frame_vbox.addWidget(self.action_button)
 
 
@@ -54,7 +50,7 @@ def main() -> None:
     application.setOrganizationName(ORGANIZATION_NAME)
     application.setOrganizationDomain(ORGANIZATION_DOMAIN)
 
-    if QtCore.QSysInfo.productType() == 'windows':
+    if QtCore.QSysInfo.productType() == "windows":
         from ctypes import windll
 
         windll.shell32.SetCurrentProcessExplicitAppUserModelID(
@@ -67,5 +63,5 @@ def main() -> None:
     sys.exit(application.exec())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

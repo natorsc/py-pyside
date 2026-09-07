@@ -1,6 +1,6 @@
+import Qt.labs.qmlmodels
 import QtQuick
 import QtQuick.Controls
-import Qt.labs.qmlmodels
 import backend 1.0
 
 ApplicationWindow {
@@ -16,6 +16,7 @@ ApplicationWindow {
     TableView {
         anchors.fill: parent
         model: Users
+
         delegate: Text {
             text: display
         }

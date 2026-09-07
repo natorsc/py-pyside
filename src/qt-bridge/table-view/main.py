@@ -1,6 +1,6 @@
+# -*- coding: utf-8 -*-
 """."""
 
-import json
 import sys
 
 from QtBridge import bridge_instance, qtbridge

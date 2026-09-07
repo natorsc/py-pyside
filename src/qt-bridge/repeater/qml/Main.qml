@@ -14,16 +14,16 @@ ApplicationWindow {
 
     Column {
         anchors.fill: parent
-        spacing: 5
         padding: 12
+        spacing: 5
 
         Repeater {
             model: Fruits
 
             Rectangle {
-                width: 200
-                height: 30
                 color: "lightblue"
+                height: 30
+                width: 200
 
                 Text {
                     anchors.centerIn: parent

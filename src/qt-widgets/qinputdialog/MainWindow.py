@@ -5,19 +5,19 @@ import sys
 
 from PySide6 import QtCore, QtWidgets
 
-APPLICATION_NAME = 'br.com.justcode.Qt'
-ORGANIZATION_NAME = APPLICATION_NAME.split('.')[2]
-ORGANIZATION_DOMAIN = '.'.join(APPLICATION_NAME.split('.')[0:3])
+APPLICATION_NAME = "br.com.justcode.Qt"
+ORGANIZATION_NAME = APPLICATION_NAME.split(".")[2]
+ORGANIZATION_DOMAIN = ".".join(APPLICATION_NAME.split(".")[0:3])
 
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, parent=None, **kwargs):
         super().__init__(parent=parent)
-        self.application = kwargs.get('application')
+        self.application = kwargs.get("application")
 
         self.resize(640, 360)
         self.setMinimumSize(640, 360)
-        self.setWindowTitle('Python - PySide6 - Qt')
+        self.setWindowTitle("Python - PySide6 - Qt")
 
         vbox = QtWidgets.QVBoxLayout()
 
@@ -28,11 +28,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.button_group = QtWidgets.QButtonGroup()
 
         items = [
-            'getText',
-            'getMultiLineText',
-            'getInt',
-            'getDouble',
-            'getItem',
+            "getText",
+            "getMultiLineText",
+            "getInt",
+            "getDouble",
+            "getItem",
         ]
         for index, item in enumerate(items):
             radio_button = QtWidgets.QRadioButton()
@@ -43,7 +43,7 @@ class MainWindow(QtWidgets.QMainWindow):
             vbox.addWidget(radio_button)
 
         button = QtWidgets.QPushButton()
-        button.setText('Open dialog')
+        button.setText("Open dialog")
         button.clicked.connect(self.on_button_clicked)
         vbox.addWidget(button)
 
@@ -51,36 +51,36 @@ class MainWindow(QtWidgets.QMainWindow):
         dialog = QtWidgets.QInputDialog
 
         match self.button_group.checkedButton().text():
-            case 'getText':
+            case "getText":
                 data, status = dialog.getText(
                     self,
-                    'Title',
-                    'Text.',
+                    "Title",
+                    "Text.",
                 )
-            case 'getMultiLineText':
+            case "getMultiLineText":
                 data, status = dialog.getMultiLineText(
                     self,
-                    'Title',
-                    'Text.',
+                    "Title",
+                    "Text.",
                 )
-            case 'getInt':
+            case "getInt":
                 data, status = dialog.getInt(
                     self,
-                    'Title',
-                    'Text.',
+                    "Title",
+                    "Text.",
                 )
-            case 'getDouble':
+            case "getDouble":
                 data, status = dialog.getDouble(
                     self,
-                    'Title',
-                    'Text.',
+                    "Title",
+                    "Text.",
                 )
             case _:
                 data, status = dialog.getItem(
                     self,
-                    'Title',
-                    'Text.',
-                    ['Item 1', 'Item 2'],
+                    "Title",
+                    "Text.",
+                    ["Item 1", "Item 2"],
                 )
         if status:
             print(data)
@@ -94,7 +94,7 @@ def main() -> None:
     application.setOrganizationName(ORGANIZATION_NAME)
     application.setOrganizationDomain(ORGANIZATION_DOMAIN)
 
-    if QtCore.QSysInfo.productType() == 'windows':
+    if QtCore.QSysInfo.productType() == "windows":
         from ctypes import windll
 
         windll.shell32.SetCurrentProcessExplicitAppUserModelID(
@@ -107,5 +107,5 @@ def main() -> None:
     sys.exit(application.exec())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -14,7 +14,6 @@ ApplicationWindow {
 
     ButtonGroup {
         id: radioGroup
-
     }
 
     Column {

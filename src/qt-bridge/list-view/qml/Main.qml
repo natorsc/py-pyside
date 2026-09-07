@@ -15,10 +15,10 @@ ApplicationWindow {
     ListView {
         anchors.fill: parent
         model: Fruits
+
         delegate: Text {
-            text: display
             padding: 12
+            text: display
         }
     }
-
 }

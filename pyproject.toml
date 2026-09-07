@@ -12,9 +12,19 @@ dependencies = [
     "qtbridge>=0.2.0",
 ]
 
-[project.scripts]
-py-pyside = "py_pyside:main"
-
 [build-system]
 requires = ["uv_build>=0.12.10,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors.
+    "F",   # pyflakes.
+    "I",   # isort (organização de imports).
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true

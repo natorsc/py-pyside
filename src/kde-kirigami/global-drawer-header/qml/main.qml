@@ -1,6 +1,6 @@
 import QtQuick
-import QtQuick.Layouts
 import QtQuick.Controls as Controls
+import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 
 Kirigami.ApplicationWindow {
@@ -39,7 +39,6 @@ Kirigami.ApplicationWindow {
         ]
         header: Kirigami.SearchField {
             id: searchField
-
         }
     }
     pageStack.initialPage: Kirigami.Page {

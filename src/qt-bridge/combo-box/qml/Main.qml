@@ -15,9 +15,10 @@ ApplicationWindow {
     ComboBox {
         anchors.fill: parent
         model: Fruits
+
         onActivated: {
-            console.log(currentIndex)
-            console.log(currentText)
+            console.log(currentIndex);
+            console.log(currentText);
         }
     }
 }
