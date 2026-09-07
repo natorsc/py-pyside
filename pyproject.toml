@@ -1,31 +1,20 @@
 [project]
-name = "python-qt"
+name = "py-pyside"
 version = "0.1.0"
-description = "Creating graphical interfaces with Python and Qt."
+description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12,<3.15"
+authors = [
+    { name = "Renato Cruz", email = "natorsc@gmail.com" }
+]
+requires-python = ">=3.14"
 dependencies = [
-    "pyside6==6.10.0",
+    "pyside6>=6.11.2",
+    "qtbridge>=0.2.0",
 ]
 
-[dependency-groups]
-dev = [
-    "ruff>=0.14.1",
-    "taskipy>=1.14.1",
-]
+[project.scripts]
+py-pyside = "py_pyside:main"
 
-[tool.ruff]
-line-length = 79
-extend-exclude = [".venv", "docs", "resources_rc.py"]
-
-[tool.ruff.lint]
-select = ["I", "F", "E", "W", "PL", "PT"]
-
-[tool.ruff.format]
-quote-style = "single"
-
-[tool.taskipy.tasks]
-format = "ruff check . --select I --fix && ruff format ."
-format-qml = "python -c 'from src.scripts import tasks; tasks.format_qml()'"
-format-qml-blk = "python -c 'from src.scripts import tasks; tasks.format_qml_bulk()'"
-outdated = "uv tree --outdated --depth=1"
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"

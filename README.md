@@ -41,9 +41,61 @@ Your donation keeps this project alive and helps me continue creating and sharin
 
 `b1839493-2afe-484d-9272-82a3e402b36f`
 
+## Desenvolvimento
+
+### uv
+
+O projeto utiliza `uv` para gerenciamento do ambiente virtual, dependências e lockfile.
+
+#### Formatar o código
+
+```bash
+uv format
+```
+
+#### Verificar atualizações
+
+Listar os pacotes com atualizações disponíveis:
+
+```bash
+uv tree --outdated --depth=1
+```
+
+Atualizar um pacote específico:
+
+```bash
+uv lock --upgrade-package nome_do_pacote
+```
+
+Sincronizar o ambiente com o `uv.lock`:
+
+```bash
+uv sync
+```
+
+### Ruff
+
+O [Ruff](https://github.com/astral-sh/ruff) é utilizado para verificação e formatação do código Python.
+
+#### Verificar e formatar o código
+
+```bash
+uvx ruff check . --fix && uvx ruff format .
+```
+
+### PySide6
+
+```bash
+uvx ruff check . --fix && uvx ruff format .
+```
+
 ---
 
 ## 💡 Extra
+
+### Qt Bridge
+
+- [Github](https://github.com/qt/qtbridge-python).
 
 ### Qt
 
@@ -302,6 +354,12 @@ mariadb-libs
 sudo pacman -S \
 mariadb-libs
 ```
+
+---
+
+## Qt Bridge
+
+ToDo
 
 ---
 
